@@ -41,9 +41,12 @@ def zad7():
 
 def zad8():
     lista=list()
-    a=input('Podaj liczbe do listy \n')
+    a=input('Podaj liczbe do listy. Aby zakończyć wciśnij \'k\' \n')
     while a!='k':
-        lista.append(float(a))
+        try:
+            lista.append(float(a))
+        except ValueError:
+            print('To nie jest liczba')
         a=input('Podaj kolejną liczbę do listy \n')
     else:
         print(lista)
@@ -59,7 +62,7 @@ def zad10():
     for x in range(int(input('Podaj liczbę naturalną z przedziału [1,10]'))):
         print ('A'*(x+1))
 def zad11():
-    a=int(input('Podaj wysokość diamencika - liczbę nieparzystą z przedziału [3,9]'))
+    a=int(input('Podaj wysokość diamencika - liczbę nieparzystą z przedziału [3,9]\n'))
     srodek=int((a+1)/2)
     for x in range(1,a+1,1):
         print('{:^10}'.format('o'*(2*(srodek-abs(srodek-x))-1)))
@@ -93,4 +96,16 @@ def zad15():
     else:
         print("Dzieki")           
 
+zad1()
+zad2()
+zad4()
+zad5()
+zad6()
+zad7()
 zad8()
+zad9()
+zad10()
+zad11()
+zad12()
+zad14()
+zad15()
